@@ -21,7 +21,7 @@ export class TictactoeBoad {
         ];
         for (const [a, b, c] of lines)
             if (this.squares[a] && this.squares[a] === this.squares[b] && this.squares[a] === this.squares[c])
-                return this.squares[a];
+                return [this.squares[a], a, b, c];
         return null;
     }
     isFull() {

@@ -13,7 +13,7 @@ export class TictactoeBoad implements Board{
         return true;
     }
 
-    checkWinner(): Player | null {
+    checkWinner(): Array<Player | number> | null {
         const lines = [
             [0, 1, 2],
             [3, 4, 5],
@@ -26,7 +26,7 @@ export class TictactoeBoad implements Board{
         ];
         for (const [a,b,c] of lines) 
             if (this.squares[a] && this.squares[a] === this.squares[b] && this.squares[a] === this.squares[c])
-                return this.squares[a];
+                return [this.squares[a], a, b, c];
         
         return null;
     }

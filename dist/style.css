@@ -2,7 +2,9 @@
     --color-bg:#000;
     --color-text:#fff;
     --color-secondary:#009688;
-    --color-overlay:#ffc107;
+    --color-overlay:#A5D6A7;
+    --color-winner:#90caf9;
+    --color-full:#A5D6A7;
 }
 
 *{
@@ -94,7 +96,7 @@ body{
 }
 
 .winner{
-    background-color: #90caf9;
+    background-color: var(--color-winner);
 }
 
 .disabled {
@@ -102,3 +104,10 @@ body{
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+.fullSquare{
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: var(--color-full);
+    color: var(--color-bg);
+}
