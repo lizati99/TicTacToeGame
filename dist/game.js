@@ -16,11 +16,10 @@ export class Game {
             target.classList.add("fullSquare");
             const winner = this.board.checkWinner();
             if (winner) {
-                this.showPlayer(`${winner} won the game`);
+                this.showPlayer(`${winner[0]} won the game`);
                 if (winner[0] == "X") {
                     const playerX = document.querySelector(".playerX > span");
                     playerX.innerHTML = `${parseInt(playerX.innerHTML) + 1}`;
-                    console.log(typeof winner[1]);
                 }
                 else {
                     const playerO = document.querySelector(".playerO > span");

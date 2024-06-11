@@ -5,6 +5,3 @@ document.addEventListener("click", (e) => {
     if (target.classList.contains("col-4"))
         game.play(parseInt(target.id), target);
 });
-
-
-
